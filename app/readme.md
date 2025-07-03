@@ -10,7 +10,7 @@ docker plugin install grafana/loki-docker-driver:2.9.2 --alias loki --grant-all-
 
 1. change to the `app` directory
 
-```bash 
+```bash
 cd app
 ```
 
@@ -35,16 +35,16 @@ cd app
 
 5. Run the Spring Boot application with OpenTelemetry agent
 
-    ```bash 
+    ```bash
    java -javaagent:opentelemetry-javaagent.jar \
          -Dotel.javaagent.configuration-file=./app/otel.properties \
          -jar target/app-0.0.1.jar \
          --spring.profiles.active=test
     ```
+
 6. Access application and Grafana:
 
     - Application: <http://localhost:8080/swagger-ui/index.html>
-
 
 7. Tear down services
 
